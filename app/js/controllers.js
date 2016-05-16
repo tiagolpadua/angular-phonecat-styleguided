@@ -4,27 +4,31 @@
     /* Controllers */
 
     angular.module('phonecatControllers', [])
-        .controller('PhoneListCtrl', PhoneListCtrl)
-        .controller('PhoneDetailCtrl', PhoneDetailCtrl);
+        .controller('PhoneListController', PhoneListController)
+        .controller('PhoneDetailController', PhoneDetailController);
 
-    PhoneListCtrl.$inject = ['Phone'];
-    function PhoneListCtrl(Phone) {
+    PhoneListController.$inject = ['phoneResource'];
+    function PhoneListController(phoneResource) {
         var vm = this;
 
         vm.orderProp = 'age';
-        vm.phones = Phone.query();
+        vm.phones = phoneResource.query();
         ////////////
     }
 
-    PhoneDetailCtrl.$inject = ['$routeParams', 'Phone'];
-    function PhoneDetailCtrl($routeParams, Phone) {
+    PhoneDetailController.$inject = ['$routeParams', 'phoneResource'];
+    function PhoneDetailController($routeParams, phoneResource) {
         var vm = this;
-
-        vm.phone = Phone.get({ phoneId: $routeParams.phoneId }, function (phone) {
-            vm.mainImageUrl = phone.images[0];
-        });
         vm.setImage = setImage;
+
+        activate();
+
         ////////////
+        function activate() {
+            vm.phone = phoneResource.get({ phoneId: $routeParams.phoneId }, function (phone) {
+                vm.mainImageUrl = phone.images[0];
+            });
+        }
 
         function setImage(imageUrl) {
             vm.mainImageUrl = imageUrl;

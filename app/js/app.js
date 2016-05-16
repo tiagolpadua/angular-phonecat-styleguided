@@ -19,12 +19,12 @@
         $routeProvider.
             when('/phones', {
                 templateUrl: 'partials/phone-list.html',
-                controller: 'PhoneListCtrl',
+                controller: 'PhoneListController',
                 controllerAs: 'vm'
             }).
             when('/phones/:phoneId', {
                 templateUrl: 'partials/phone-detail.html',
-                controller: 'PhoneDetailCtrl',
+                controller: 'PhoneDetailController',
                 controllerAs: 'vm'
             }).
             otherwise({
