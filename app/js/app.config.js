@@ -1,17 +1,7 @@
 (function () {
     'use strict';
 
-    /* App Module */
-
-    //TODO: Rename modules according Y020
-    angular.module('phonecatApp', [
-        'ngRoute',
-        'phonecatAnimations',
-
-        'phonecatControllers',
-        'phonecatFilters',
-        'phonecatServices'
-    ])
+    angular.module('phonecatApp')
         .config(config);
 
     config.$inject = ['$routeProvider'];
