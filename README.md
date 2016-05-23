@@ -5,7 +5,7 @@ Angular Phonecat project refactored to John Papa's opinionated style guide.
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app. 
 
-It has been forked from the [angular-phonecat] (https://github.com/angular/angular-phonecat) project and refactored to use the best practices/style guide written and maintained by John Papa -- [Style Guide](https://github.com/johnpapa/angular-styleguide). 
+It has been forked from the [angular-phonecat](https://github.com/angular/angular-phonecat) project and refactored to use the best practices/style guide written and maintained by John Papa -- [Style Guide](https://github.com/johnpapa/angular-styleguide). 
 
 This seed wires together a basic app, two components/controllers and one service.  There is intentnially minimal build infrastructure.
 
@@ -54,33 +54,18 @@ This will result in the following third-part modules.
 * `node_modules` - contains the npm packages for the tools we need
 * `bower_components` - contains the angular framework files
 
-*Note that the `bower_components` folder would normally be installed in the root folder but
-angular-phonecat-styleguided changes this location through the `.bowerrc` file.  Putting it in the app folder makes
-it easier to serve the files by a webserver.*
-
 ### Run the Application
 
 ```bash
 npm start
 ```
 
-Now browse to the app at `http://localhost:8000/index.html`.
+Now browse to the app at `http://localhost:8000/client/index.html`.
 
 
 ## Directory Layout
 
-```
-app/                    --> all of the source files for the application
-  css/app.css           --> default stylesheet
-  components/           --> all app specific modules
-  app.js                --> main application module
-  index.html            --> app layout file (the main html template file of the app)
-  index-async.html      --> just like index.html, but loads js files asynchronously
-karma.conf.js         --> config file for running unit tests with Karma
-e2e-tests/            --> end-to-end tests
-  protractor-conf.js    --> Protractor config file
-  scenarios.js          --> end-to-end scenarios to be run by Protractor
-```
+Directory Layout follows the [Style Y140](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y140)
 
 ## Testing
 
@@ -107,7 +92,6 @@ If you just want a single run then...
 npm run test-single-run
 ```
 
-
 ### End to end testing
 
 The angular-seed-styleguided app comes with end-to-end tests written in [Jasmine][jasmine] and run with [Protractor][protractor].
@@ -127,26 +111,6 @@ npm run protractor
 ```
 
 This will download and install the latest version of the stand-alone WebDriver tool if necessary and run protractor using the configuration file.
-
-
-## Make It Yours
-Once you've got everything running and tested, you should probably rename your root module from the very cheesy `myApp` to something cool like `myCoolApp`. The script bewlow will do a regex replace in the javascript and html files for you.  
-
-Replace the `YOUR_APP_NAME` text in `package.json`. 
-
-To preview what will be changed, run:
-
-```bash
-npm run replace-name-preview
-```
-
-To make the changes:
-
-```bash
-npm run replace-name
-```
-
-
 
 ## Updating Tools and Packages
 
