@@ -144,7 +144,7 @@ This will run your app in an http server accessible at [http://localhost:8000](h
 ### Travis CI
 
 [Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits
-to your repository and execute scripts such as building the app or running tests. The angular-seed-styleguided
+to your repository and execute scripts such as building the app or running tests. The angular-phonecat-styleguided
 project contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
 tests when you push to GitHub.
 
