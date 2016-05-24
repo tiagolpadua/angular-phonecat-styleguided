@@ -24,5 +24,5 @@ npm run update-webdriver
 node_modules/.bin/http-server -p 8000 &
 WEBSERVER_PID=$!
 
-node_modules/karma/bin/karma start test/karma.conf.js --single-run
-node_modules/.bin/protractor test/protractor-conf.js
+node_modules/karma/bin/karma start test/karma.conf.travis.js
+# node_modules/.bin/protractor test/protractor-conf.js
