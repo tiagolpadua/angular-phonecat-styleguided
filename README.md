@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tiagolpadua/angular-phonecat-styleguided.svg?branch=master)](https://travis-ci.org/tiagolpadua/angular-phonecat-styleguided)
+
 # angular-phonecat-styleguided
 Angular Phonecat project refactored to John Papa's opinionated style guide.
 
